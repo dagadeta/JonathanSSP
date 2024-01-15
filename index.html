@@ -3,15 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>Schere Stein Papier</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
         <link rel="stylesheet" href="style.css">
         <script src="code.js"></script>
     </head>
     <body>
         <h1>Schere Stein Papier</h1>
-        <button onclick=main("Schere")>Schere</button>
-        <button onclick=main("Stein")>Stein</button>
-        <button onclick=main("Papier")>Papier</button>
-        <p>Du hast <span id="playeranswer"></span> genommen</p>
-        <p>Der Computer hat <span id="computeranswer"></span> genommen</p>
+        <button onclick=main("Schere")><img src="images/schere.png" alt="Schere"></button>
+        <button onclick=main("Stein")><img src="images/stein.png" alt="Stein"></button>
+        <button onclick=main("Papier")><img src="images/papier.png" alt="Papier"></button>
+        <p class="answer" id="playeranswermain">Du hast <span id="playeranswer"></span> genommen</p>
+        <p class="answer" id="computeranswermain">Der Computer hat <span id="computeranswer"></span> genommen</p>
+        <p id="won"><span id="whowon"></span> hat gewonnen</p>
     </body>
 </html>

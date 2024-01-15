@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Bahnschrift, serif;
+}
+
+button {
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Bahnschrift, serif;
+}
+
+img {
+    height: 40px;
+    margin-top: 5px;
+}
+
+.answer {
+    display: none;
+}
+
+#won {
+    display: none;
+}
