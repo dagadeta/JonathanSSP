@@ -9,11 +9,20 @@
     </head>
     <body>
         <h1>Schere Stein Papier</h1>
-        <button onclick=main("Schere")><img src="images/schere.png" alt="Schere"></button>
-        <button onclick=main("Stein")><img src="images/stein.png" alt="Stein"></button>
-        <button onclick=main("Papier")><img src="images/papier.png" alt="Papier"></button>
-        <p class="answer" id="playeranswermain">Du hast <span id="playeranswer"></span> genommen</p>
-        <p class="answer" id="computeranswermain">Der Computer hat <span id="computeranswer"></span> genommen</p>
-        <p id="won"><span id="whowon"></span> hat gewonnen</p>
+        <button onclick=main("playeranswersc")><img src="images/scissors.svg" alt="Schere"></button>
+        <button onclick=main("playeranswerst")><img src="images/rock.svg" alt="Stein"></button>
+        <button onclick=main("playeranswerpa")><img src="images/paper.svg" alt="Papier"></button>
+        <p>Deine Wahl:</p>
+        <button class="symbol" id="playeranswersc"><img src="images/scissors.svg" alt="Schere"></button>
+        <button class="symbol" id="playeranswerst"><img src="images/rock.svg" alt="Stein"></button>
+        <button class="symbol" id="playeranswerpa"><img src="images/paper.svg" alt="Papier"></button>
+        <p>Die Wahl des Computers:</p>
+        <button class="symbol" id="computeranswersc"><img src="images/scissors.svg" alt="Schere"></button>
+        <button class="symbol" id="computeranswerst"><img src="images/rock.svg" alt="Stein"></button>
+        <button class="symbol" id="computeranswerpa"><img src="images/paper.svg" alt="Papier"></button>
+        <p>Das Ergebnis:</p>
+        <button class="symbol" id="playerwon"><img src="images/player.svg" alt="Player won"></button>
+        <button class="symbol" id="computerwon"><img src="images/computer.svg" alt="Computer won"></button>
+        <br><p>Icons by <a href="https://freeicons.io/profile/14783">PlutoPixel</a> and <a href="https://freeicons.io/profile/726">Free Preloaders</a></p>
     </body>
 </html>

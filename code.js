@@ -1,50 +1,55 @@
 function main(playeranswer) {
     let computeranswer = random();
-    document.getElementById("playeranswermain").style.display = "block";
-    document.getElementById("computeranswermain").style.display = "block";
-    document.getElementById("playeranswer").innerHTML = playeranswer;
-    document.getElementById("computeranswer").innerHTML = computeranswer;
+    document.getElementById("computeranswersc").style.backgroundColor = "#2a5256";
+    document.getElementById("computeranswerst").style.backgroundColor = "#2a5256";
+    document.getElementById("computeranswerpa").style.backgroundColor = "#2a5256";
+    document.getElementById(computeranswer).style.backgroundColor = "#5f9ea0";
+    document.getElementById("playeranswersc").style.backgroundColor = "#2a5256";
+    document.getElementById("playeranswerst").style.backgroundColor = "#2a5256";
+    document.getElementById("playeranswerpa").style.backgroundColor = "#2a5256";
+    document.getElementById(playeranswer).style.backgroundColor = "#5f9ea0";
 
-    let won;
-    if (playeranswer === "Schere") {
-        if (computeranswer === "Schere") {
-            won = "Niemand";
-        } else if (computeranswer === "Stein") {
-            won = "Computer";
-        } else if (computeranswer === "Papier") {
-            won = "Spieler"
+    let result;
+    if (playeranswer === "playeranswersc") {
+        if (computeranswer === "computeranswersc") {
+            result = "tie";
+        } else if (computeranswer === "computeranswerst") {
+            result = "computerwon";
+        } else if (computeranswer === "computeranswerpa") {
+            result = "playerwon"
         }
-    } else if (playeranswer === "Stein") {
-        if (computeranswer === "Schere") {
-            won = "Spieler";
-        } else if (computeranswer === "Stein") {
-            won = "Niemand";
-        } else if (computeranswer === "Papier") {
-            won = "Computer"
+    } else if (playeranswer === "playeranswerst") {
+        if (computeranswer === "computeranswersc") {
+            result = "playerwon";
+        } else if (computeranswer === "computeranswerst") {
+            result = "tie";
+        } else if (computeranswer === "computeranswerpa") {
+            result = "computerwon"
         }
-    } else if (playeranswer === "Papier") {
-        if (computeranswer === "Schere") {
-            won = "Computer"
-        } else if (computeranswer === "Stein") {
-            won = "Spieler"
-        } else if (computeranswer ==="Papier") {
-            won = "Niemand"
+    } else if (playeranswer === "playeranswerpa") {
+        if (computeranswer === "computeranswersc") {
+            result = "computerwon"
+        } else if (computeranswer === "computeranswerst") {
+            result = "playerwon"
+        } else if (computeranswer ==="computeranswerpa") {
+            result = "tie"
         }
     }
 
-    document.getElementById("won").style.display = "block";
-    document.getElementById("whowon").innerHTML = won;
+    document.getElementById("playerwon").style.backgroundColor = "#2a5256";
+    document.getElementById("computerwon").style.backgroundColor = "#2a5256";
+    document.getElementById(result).style.backgroundColor = "#5f9ea0";
 }
 
 function random() {
     const randomnumber = Math.floor(Math.random() * 3);
     let computeranswer;
     if (randomnumber === 0) {
-        computeranswer = "Schere";
+        computeranswer = "computeranswersc";
     } else if (randomnumber === 1) {
-        computeranswer = "Stein";
+        computeranswer = "computeranswerst";
     } else if (randomnumber === 2) {
-        computeranswer = "Papier";
+        computeranswer = "computeranswerpa";
     }
     return(computeranswer);
 }
